@@ -90,6 +90,11 @@ MP4::File::~File()
   delete d;
 }
 
+MP4::Atoms*	MP4::File::GetAtoms(void) const
+{
+	return d->atoms;
+}
+
 MP4::Tag *
 MP4::File::tag() const
 {

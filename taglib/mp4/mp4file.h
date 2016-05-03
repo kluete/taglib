@@ -114,6 +114,8 @@ namespace TagLib {
        */
       bool save();
 
+      MP4::Atoms*	GetAtoms(void) const;
+      
       /*!
        * Returns whether or not the file on disk actually has an MP4 tag, or the
        * file has a Metadata Item List (ilst) atom.
