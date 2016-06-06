@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
     if(isArgument(argv[i]) && i + 1 < argc && !isArgument(argv[i + 1])) {
 
       char field = argv[i][1];
-      TagLib::String value = argv[i + 1];
+      TagLib::String value(argv[i + 1], TagLib::String::UTF8);
 
       TagLib::List<TagLib::FileRef>::ConstIterator it;
       for(it = fileList.begin(); it != fileList.end(); ++it) {
